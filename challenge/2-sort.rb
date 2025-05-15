@@ -20,15 +20,15 @@ ARGV.each do |arg|
         if result[i] < i_arg
             i += 1
         else
-            result.insert(i, i_arg)  # CORREGIDO: se inserta en la posición correcta
+            result.insert(i, i_arg)
             is_inserted = true
             break
         end
     end
 
-    # si no se insertó en el ciclo, lo agregamos al final
+    # if not inserted, append at the end
     result << i_arg if !is_inserted
 end
 
-# Imprimir los resultados ordenados, separados por espacio
-puts result.join(" ")
+# Print each number on a separate line
+puts result
